@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ActivatedRoute, RouterModule } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { ProdutoService } from '../produto.service';
 import { ScrollService } from '../scroll.service';
 
@@ -17,6 +17,7 @@ export class CategoriaDetalhesComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
     private produtoService: ProdutoService,
     private scrollService: ScrollService
   ) { }
@@ -27,5 +28,9 @@ export class CategoriaDetalhesComponent implements OnInit {
       this.produtos = this.produtoService.getProdutosPorCategoria(this.categoria);
       this.scrollService.scrollToTop();
     });
+  }
+
+  voltarParaCatalogo() {
+    this.router.navigate(['/'], { replaceUrl: true });
   }
 }

@@ -1,7 +1,7 @@
 <div class="produto-detalhe" *ngIf="produto">
   <div class="produto-header">
     <h2>{{ produto.nome }}</h2>
-    <a routerLink="/" class="btn-voltar">Voltar ao catálogo</a>
+    <button (click)="voltarParaCatalogo()" class="btn-voltar">Voltar ao catálogo</button>
   </div>
   
   <div class="produto-content">

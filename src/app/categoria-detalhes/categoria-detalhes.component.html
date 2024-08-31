@@ -1,6 +1,6 @@
 <h2 class="section-title">{{ categoria }}</h2>
 
-<a routerLink="/" class="btn-voltar">Voltar para o catálogo</a>
+<button (click)="voltarParaCatalogo()" class="btn-voltar">Voltar para o catálogo</button>
 
 <div class="produto-lista">
   <div *ngFor="let produto of produtos" class="produto-item" [routerLink]="['/produto', produto.id]">

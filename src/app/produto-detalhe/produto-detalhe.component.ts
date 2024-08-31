@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ActivatedRoute, RouterModule } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { ProdutoService } from '../produto.service';
 import { ScrollService } from '../scroll.service';
 
@@ -16,6 +16,7 @@ export class ProdutoDetalheComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
+    private router: Router,  // Corrigido de RouterModule para Router
     private produtoService: ProdutoService,
     private scrollService: ScrollService
   ) { }
@@ -31,5 +32,9 @@ export class ProdutoDetalheComponent implements OnInit {
   encomendar() {
     const mensagem = encodeURIComponent(`Olá, gostaria de encomendar o produto ${this.produto.nome}.`);
     window.open(`https://wa.me/5511957692714?text=${mensagem}`, '_blank');
+  }
+
+  voltarParaCatalogo() {
+    this.router.navigate(['/'], { replaceUrl: true });
   }
 }
