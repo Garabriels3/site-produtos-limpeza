@@ -13,7 +13,7 @@
       <h4 class="produto-nome">{{ produto.nome }}</h4>
       <p class="produto-preco">R$ {{ produto.preco.toFixed(2) }}</p>
     </div>
-    <a [routerLink]="['/categoria', categoria]" class="btn-ver-mais" aria-label="Ver mais produtos desta categoria">
+    <a *ngIf="deveExibirBotaoVerMais(categoria)" [routerLink]="['/categoria', categoria]" class="btn-ver-mais" aria-label="Ver mais produtos desta categoria">
       <span class="plus-icon">+</span>
     </a>
   </div>

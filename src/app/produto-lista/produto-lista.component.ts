@@ -11,17 +11,20 @@ import { ProdutoService } from '../produto.service';
   styleUrls: ['./produto-lista.component.css']
 })
 export class ProdutoListaComponent implements OnInit {
-  produtos: any[] = [];
   categorias: string[] = [];
 
-  constructor(private produtoService: ProdutoService) {}
+  constructor(private produtoService: ProdutoService) { }
 
   ngOnInit(): void {
-    this.produtos = this.produtoService.getProdutos();
-    this.categorias = [...new Set(this.produtos.map(p => p.categoria))];
+    const produtos = this.produtoService.getProdutos();
+    this.categorias = [...new Set(produtos.map(p => p.categoria))];
   }
 
   getProdutosPorCategoria(categoria: string): any[] {
     return this.produtoService.getProdutosPorCategoria(categoria);
+  }
+
+  deveExibirBotaoVerMais(categoria: string): boolean {
+    return this.getProdutosPorCategoria(categoria).length > 4;
   }
 }
