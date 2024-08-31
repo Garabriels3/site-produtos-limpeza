@@ -3,7 +3,7 @@
 <a routerLink="/" class="btn-voltar">Voltar para o catálogo</a>
 
 <div class="produto-lista">
-  <div *ngFor="let produto of produtos" class="produto-item">
+  <div *ngFor="let produto of produtos" class="produto-item" [routerLink]="['/produto', produto.id]">
     <div class="imagem-container">
       <img *ngIf="produto.imagem; else imagemPadrao" [src]="produto.imagem" [alt]="produto.nome">
       <ng-template #imagemPadrao>

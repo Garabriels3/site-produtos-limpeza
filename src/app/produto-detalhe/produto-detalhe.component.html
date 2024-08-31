@@ -1,1 +1,28 @@
-<p>produto-detalhe works!</p>
+<div class="produto-detalhe" *ngIf="produto">
+  <div class="produto-header">
+    <h2>{{ produto.nome }}</h2>
+    <a routerLink="/" class="btn-voltar">Voltar ao catálogo</a>
+  </div>
+  
+  <div class="produto-content">
+    <div class="produto-imagem">
+      <img *ngIf="produto.imagem; else imagemPadrao" [src]="produto.imagem" [alt]="produto.nome">
+      <ng-template #imagemPadrao>
+        <div class="imagem-padrao"></div>
+      </ng-template>
+    </div>
+    
+    <div class="produto-info">
+      <p class="produto-preco">R$ {{ produto.preco.toFixed(2) }}</p>
+      <p class="produto-categoria">Categoria: {{ produto.categoria }}</p>
+      
+      <h3>Como usar</h3>
+      <p>{{ produto.comoUsar || 'Instruções de uso não disponíveis.' }}</p>
+      
+      <h3>Recomendações de cuidado</h3>
+      <p>{{ produto.recomendacoes || 'Recomendações não disponíveis.' }}</p>
+      
+      <button class="btn-encomendar" (click)="encomendar()">Encomendar via WhatsApp</button>
+    </div>
+  </div>
+</div>

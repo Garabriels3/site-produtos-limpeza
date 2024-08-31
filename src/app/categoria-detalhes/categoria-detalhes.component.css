@@ -13,6 +13,7 @@
   font-size: 14px;
   margin-bottom: 20px;
   transition: background-color 0.3s ease;
+  cursor: pointer;
 }
 
 .btn-voltar:hover {
@@ -31,6 +32,12 @@
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.produto-item:hover {
+  transform: translateY(-5px);
 }
 
 .imagem-container {
