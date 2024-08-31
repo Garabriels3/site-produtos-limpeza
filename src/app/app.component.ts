@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
-import { ProdutoListaComponent } from './produto-lista/produto-lista.component';
-import { RouterModule } from '@angular/router';
+import { RouterOutlet } from '@angular/router';
+import { FooterComponent } from './footer/footer.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [ProdutoListaComponent, RouterModule],
+  imports: [RouterOutlet, FooterComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Nascimento Produtos de Limpeza';
+  title = 'produtos-limpeza';
 }
