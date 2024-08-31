@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { ProdutoService } from '../produto.service';
+import { ScrollService } from '../scroll.service';
 
 @Component({
   selector: 'app-categoria-detalhes',
@@ -16,13 +17,15 @@ export class CategoriaDetalhesComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private produtoService: ProdutoService
+    private produtoService: ProdutoService,
+    private scrollService: ScrollService
   ) { }
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       this.categoria = params['categoria'];
       this.produtos = this.produtoService.getProdutosPorCategoria(this.categoria);
+      this.scrollService.scrollToTop();
     });
   }
 }
