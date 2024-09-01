@@ -18,7 +18,7 @@ export class ProdutoDetalheComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private router: Router,  // Corrigido de RouterModule para Router
+    private router: Router,  
     private produtoService: ProdutoService,
     private scrollService: ScrollService,
     private firebaseStorage: FirebaseStorageService
@@ -51,6 +51,6 @@ export class ProdutoDetalheComponent implements OnInit {
   }
 
   voltarParaCatalogo() {
-    this.router.navigate(['/'], { replaceUrl: true });
+    this.router.navigate(['catalogo'], { replaceUrl: true });
   }
 }
