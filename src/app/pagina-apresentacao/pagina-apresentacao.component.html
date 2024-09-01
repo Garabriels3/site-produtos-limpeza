@@ -1,0 +1,17 @@
+<div class="pagina-apresentacao">
+  <h1>Nossa História</h1>
+  
+  <div class="historia-container" *ngIf="historiaLojaComUrls$ | async as historiaItems" [@staggerFadeIn]="historiaItems.length">
+    <div *ngFor="let item of historiaItems" class="historia-item">
+      <div class="imagem-container">
+        <img [src]="item.imageUrl || imagemPadrao" [alt]="item.titulo" (error)="item.imageUrl = imagemPadrao">
+      </div>
+      <div class="texto-container">
+        <h2>{{ item.titulo }}</h2>
+        <p>{{ item.descricao }}</p>
+      </div>
+    </div>
+  </div>
+  
+  <a [routerLink]="['/catalogo']" class="btn-catalogo">Ver Catálogo</a>
+</div>
