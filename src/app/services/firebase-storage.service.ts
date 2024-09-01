@@ -1,14 +1,15 @@
-import { Injectable, inject } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Storage, ref, getDownloadURL } from '@angular/fire/storage';
-import { from, Observable } from 'rxjs';
+import { Observable, from } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FirebaseStorageService {
-  private storage: Storage = inject(Storage);
+  constructor(private storage: Storage) {}
 
   getImageUrl(path: string): Observable<string> {
-    return from(getDownloadURL(ref(this.storage, path)));
+    const storageRef = ref(this.storage, path);
+    return from(getDownloadURL(storageRef));
   }
 }

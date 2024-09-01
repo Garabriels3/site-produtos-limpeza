@@ -1,19 +1,17 @@
-<main>
-  <h1>Bem-vindo à Nossa Loja</h1>
-  <p>Uma história de paixão pela moda e dedicação aos clientes</p>
-
-  <section class="historia">
-    <ng-container *ngIf="historiaLojaComUrls$ | async as historiaLoja">
-      <div *ngFor="let item of historiaLoja" class="historia-item">
-        <img [src]="item.imageUrl" [alt]="item.titulo" (error)="item.imageUrl = 'caminho/para/imagem/padrao.png'">
+<div class="pagina-apresentacao">
+  <h1>Nossa História</h1>
+  
+  <div class="historia-container" *ngIf="historiaLojaComUrls$ | async as historiaItems" [@staggerFadeIn]="historiaItems.length">
+    <div *ngFor="let item of historiaItems" class="historia-item">
+      <div class="imagem-container">
+        <img [src]="item.imageUrl || imagemPadrao" [alt]="item.titulo" (error)="item.imageUrl = imagemPadrao">
+      </div>
+      <div class="texto-container">
         <h2>{{ item.titulo }}</h2>
         <p>{{ item.descricao }}</p>
       </div>
-    </ng-container>
-  </section>
-
-  <section class="cta">
-    <h2>Venha nos conhecer!</h2>
-    <button [routerLink]="['/catalogo']" class="btn-catalogo">Ver Nosso Catálogo</button>
-  </section>
-</main>
+    </div>
+  </div>
+  
+  <a [routerLink]="['/catalogo']" class="btn-catalogo">Ver Catálogo</a>
+</div>
