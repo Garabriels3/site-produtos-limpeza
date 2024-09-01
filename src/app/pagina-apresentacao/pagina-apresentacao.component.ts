@@ -37,17 +37,17 @@ export class PaginaApresentacaoComponent implements OnInit {
     { 
       imagem: 'loja/inicio_de_tudo.png', 
       titulo: 'O Início de Tudo', 
-      descricao: 'Em 1990, meu pai iniciou nossa jornada com um pequeno estoque de produtos de limpeza em casa.'
+      descricao: 'A loja iniciou suas atividades de forma simples, com um pequeno estoque de produtos de limpeza em casa na frente de nossa casa na calçada.'
     },
     { 
       imagem: 'loja/frente_loja_fechado.png', 
       titulo: 'Nossa Primeira Loja', 
-      descricao: 'Em 1995, abrimos nossa primeira e única loja física.'
+      descricao: 'Graças a Deus, conseguimos reformar a frente de nossa casa onde ganhamos mais espaço para vender nossos produtos de limpeza.'
     },
     { 
       imagem: 'loja/frente_atual_loja.png', 
       titulo: 'Crescimento e Renovação', 
-      descricao: 'Em 2010, fizemos uma grande reforma, modernizando nossa fachada.'
+      descricao: 'Passmamos por mais algumas reformas para deixar tudo bem organizado'
     },
     { 
       imagem: 'loja/dentro_loja.png',
