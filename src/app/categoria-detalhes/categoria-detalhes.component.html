@@ -5,9 +5,11 @@
 <div class="produto-lista">
   <div *ngFor="let produto of produtos" class="produto-item" [routerLink]="['/produto', produto.id]">
     <div class="imagem-container">
-      <img *ngIf="produto.imagem; else imagemPadrao" [src]="produto.imagem" [alt]="produto.nome">
-      <ng-template #imagemPadrao>
-        <div class="imagem-padrao"></div>
+      <ng-container *ngIf="produto.imagemCarregada; else loadingImagem">
+        <img [src]="produto.imagem || imagemPadrao" [alt]="produto.nome" (load)="onImagemCarregada(produto)" (error)="onImagemErro(produto)">
+      </ng-container>
+      <ng-template #loadingImagem>
+        <div class="loading-spinner"></div>
       </ng-template>
     </div>
     <div class="produto-info">

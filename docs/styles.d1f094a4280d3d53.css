@@ -1,0 +1,143 @@
+/*!**********************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].rules[0].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].rules[0].oneOf[0].use[2]!./src/styles.css?ngGlobalStyle ***!
+  \**********************************************************************************************************************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Open+Sans:wght@300;400;600&display=swap);
+/*!**************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].rules[0].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].rules[0].oneOf[0].use[2]!./src/styles.css?ngGlobalStyle (1) ***!
+  \**************************************************************************************************************************************************************************************************************************/
+/* You can add global styles to this file, and also import other style files */
+
+:root {
+  --cor-primaria: #3498db;
+  --cor-secundaria: #d4e4f18f;
+  --cor-texto: #333333;
+  --cor-texto-claro: #ffffff;
+  --cor-borda: #e0e0e0;
+  --cor-fundo: #f9f9f9;
+  --cor-card-info: rgba(255, 255, 255, 0.959);
+  --cor-card-imagem: #f5f5f5;
+  --fonte-titulo: 'Montserrat', sans-serif;
+  --fonte-corpo: 'Open Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--fonte-corpo);
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--fonte-titulo);
+  font-weight: 600;
+  color: var(--cor-primaria);
+  margin-bottom: 1rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto-claro);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+.card {
+  background-color: var(--cor-card-info);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+}
+
+/* ou no arquivo CSS apropriado */
+.btn-voltar {
+  background-color: var(--cor-primaria);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn-voltar:hover {
+  background-color: #0052a3;
+}
+
+.card {
+  background-color: var(--cor-card);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid #e0e0e0;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  padding: 1.25rem;
+}
+
+.card-title {
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 0.75rem;
+}
+
+.card-text {
+  color: #555555;
+}
+
+/* Se você tiver uma classe específica para os containers dos cards, pode adicionar um espaçamento */
+.card-container {
+  margin-bottom: 1.5rem;
+}
+
+.category-card {
+  /* Estilos específicos para cards de categoria */
+}
+
+.vertical-list-card {
+  /* Estilos específicos para cards de lista vertical */
+}
+
