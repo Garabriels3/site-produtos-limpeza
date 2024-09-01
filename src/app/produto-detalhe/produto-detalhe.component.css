@@ -48,7 +48,17 @@
 }
 
 .imagem-padrao {
-  background-color: #e0e0e0;
+  width: 100%;
+  height: 300px; /* ou o tamanho que você preferir */
+  background-color: #f0f0f0; /* cor de fundo para a imagem padrão */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagem-padrao::after {
+  content: 'Imagem não disponível';
+  color: #999;
 }
 
 .produto-info {

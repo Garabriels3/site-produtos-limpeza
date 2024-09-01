@@ -6,7 +6,7 @@
   
   <div class="produto-content">
     <div class="produto-imagem">
-      <img *ngIf="produto.imagem; else imagemPadrao" [src]="produto.imagem" [alt]="produto.nome">
+      <img *ngIf="imagemUrl; else imagemPadrao" [src]="imagemUrl" [alt]="produto.nome">
       <ng-template #imagemPadrao>
         <div class="imagem-padrao"></div>
       </ng-template>
