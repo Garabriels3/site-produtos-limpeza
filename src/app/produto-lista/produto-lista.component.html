@@ -5,16 +5,13 @@
   <div class="produto-grid">
     <div *ngFor="let produto of getProdutosPorCategoria(categoria).slice(0, 4)" class="produto-card" [routerLink]="['/produto', produto.id]">
       <div class="imagem-container">
-        <img *ngIf="produto.imagem; else imagemPadrao" [src]="produto.imagem" [alt]="produto.nome">
-        <ng-template #imagemPadrao>
-          <div class="imagem-padrao"></div>
-        </ng-template>
+        <img [src]="produto.imagem || imagemPadrao" [alt]="produto.nome">
       </div>
       <h4 class="produto-nome">{{ produto.nome }}</h4>
       <p class="produto-preco">R$ {{ produto.preco.toFixed(2) }}</p>
     </div>
     <a *ngIf="deveExibirBotaoVerMais(categoria)" [routerLink]="['/categoria', categoria]" class="btn-ver-mais" aria-label="Ver mais produtos desta categoria">
-      <span class="plus-icon">+</span>
+      Ver mais
     </a>
   </div>
 </div>
