@@ -47,7 +47,7 @@ export class ProdutoService {
       nome: 'Água Sanitária', 
       categoria: 'Limpeza Geral', 
       preco: 3.50,
-      imagemPath: 'produtos/agua_sanitaria.jpg',
+      imagemPath: 'produtos/agua_sanitaria.png',
       comoUsar: 'Para desinfecção de superfícies, dilua 1 copo (200ml) em 1 litro de água. Aplique a solução e deixe agir por 10 minutos. Para roupas brancas, siga as instruções do rótulo para a quantidade adequada.',
       recomendacoes: 'Use luvas e máscara ao manusear. Não misture com outros produtos, especialmente amoníaco. Mantenha o ambiente bem ventilado durante o uso. Em caso de contato com a pele ou olhos, lave imediatamente com água em abundância.'
     },
@@ -83,7 +83,7 @@ export class ProdutoService {
       nome: 'Lustra Móveis',
       categoria: 'Limpeza Geral',
       preco: 8.50,
-      imagemPath: 'produtos/lustra_moveis.jpg',
+      imagemPath: 'produtos/lutra_moveis.jpg',
       comoUsar: 'Aplique uma pequena quantidade do produto em um pano macio e limpo. Passe sobre a superfície dos móveis em movimentos circulares. Deixe secar naturalmente para obter brilho.',
       recomendacoes: 'Teste em uma área pequena e discreta antes de usar. Não use em superfícies enceradas ou não envernizadas. Mantenha fora do alcance de crianças.'
     },
@@ -101,7 +101,7 @@ export class ProdutoService {
       nome: 'Sabão de Coco em Barra',
       categoria: 'Lavanderia',
       preco: 3.00,
-      imagemPath: 'produtos/sabao_de_coco_em_barra.jpg',
+      imagemPath: 'produtos/sabao_de_coco_em_barra.png',
       comoUsar: 'Umedeça o sabão e esfregue diretamente na mancha ou área suja da roupa. Deixe agir por alguns minutos antes de lavar normalmente.',
       recomendacoes: 'Ideal para roupas delicadas e bebês. Evite o contato prolongado com a pele. Em caso de irritação, suspenda o uso e consulte um médico.'
     },
@@ -119,7 +119,7 @@ export class ProdutoService {
       nome: 'Alvejante sem Cloro',
       categoria: 'Lavanderia',
       preco: 7.00,
-      imagemPath: 'produtos/alvejante_sem_cloro.jpg',
+      imagemPath: 'produtos/alvejante_sem_cloro.png',
       comoUsar: 'Adicione a quantidade recomendada no rótulo junto com o sabão no início do ciclo de lavagem. Para manchas, aplique diretamente e deixe agir por 5-10 minutos antes de lavar.',
       recomendacoes: 'Seguro para a maioria das roupas coloridas. Teste em uma área pequena antes de usar em tecidos delicados. Não use em lã, seda, couro ou roupas com acabamento especial.'
     },
@@ -146,27 +146,9 @@ export class ProdutoService {
       nome: 'Limpa Tapetes e Carpetes',
       categoria: 'Limpeza Geral',
       preco: 11.00,
-      imagemPath: 'produtos/limpa_tapetes_e_carpetes.jpg',
+      imagemPath: 'produtos/limpa_taptes_e_carpetes.png',
       comoUsar: 'Aspire bem o tapete ou carpete. Dilua o produto conforme as instruções e aplique com um pano úmido ou escova macia. Deixe secar completamente e aspire novamente.',
       recomendacoes: 'Teste a resistência da cor em uma área discreta antes de usar. Não encharque o tapete ou carpete. Use em ambiente bem ventilado. Mantenha crianças e animais afastados até que a área esteja completamente seca.'
-    },
-    {
-      id: 16,
-      nome: 'Desengordurante para Fogão',
-      categoria: 'Cozinha',
-      preco: 7.50,
-      imagemPath: 'produtos/desengordurante_para_fogao.jpg',
-      comoUsar: 'Com o fogão frio, borrife o produto diretamente nas superfícies engorduradas. Deixe agir por 5-10 minutos. Limpe com um pano úmido ou esponja. Enxágue bem e seque com um pano limpo.',
-      recomendacoes: 'Use luvas ao manusear. Não use em superfícies quentes. Evite o contato com os olhos e a pele. Em caso de contato, lave com água em abundância.'
-    },
-    {
-      id: 17,
-      nome: 'Limpa Inox',
-      categoria: 'Cozinha',
-      preco: 9.50,
-      imagemPath: 'produtos/limpa_inox.jpg',
-      comoUsar: 'Aplique uma pequena quantidade do produto em um pano macio e limpo. Passe sobre a superfície de inox seguindo o sentido do acabamento. Passe um pano seco para dar brilho.',
-      recomendacoes: 'Não use em superfícies que entram em contato direto com alimentos. Evite o uso em superfícies quentes. Mantenha fora do alcance de crianças.'
     },
     {
       id: 18,

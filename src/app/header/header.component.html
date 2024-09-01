@@ -1,6 +1,6 @@
 <header class="site-header">
   <div class="header-content">
     <h1>Nascimento Produtos de Limpeza e Higiene em Geral</h1>
-    <a routerLink="/" class="btn-home">Início</a>
+    <a *ngIf="!isHomePage" routerLink="/" class="btn-home">Início</a>
   </div>
 </header>

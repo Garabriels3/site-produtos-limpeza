@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -11,4 +11,10 @@ import { RouterModule } from '@angular/router';
 })
 export class HeaderComponent {
   title = 'Nascimento Produtos de Limpeza e Higiene em Geral';
+
+  constructor(private router: Router) {}
+
+  get isHomePage(): boolean {
+    return this.router.url === '/';
+  }
 }
